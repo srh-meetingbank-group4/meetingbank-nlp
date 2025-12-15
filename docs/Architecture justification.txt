@@ -1,0 +1,178 @@
+Good. Now we **stop touching data** and move to the **design + justification step**.
+This is where marks are won because most students can run queries — very few can **explain why the architecture makes sense**.
+
+---
+
+# NEXT STEP — Architecture Justification (VERY IMPORTANT)
+
+## 🎯 Goal of this step
+
+Show that:
+
+* PostgreSQL was used **correctly** for structured data
+* MongoDB was used **correctly** for NLP / analytics
+* The split was **intentional**, not accidental
+
+This is usually an **entire grading rubric section**.
+
+---
+
+## 1️⃣ What you will produce (no coding)
+
+You will add **one short section** to your report (and maybe one diagram).
+
+### Section title (use something like):
+
+> **Database Architecture and Technology Justification**
+
+---
+
+## 2️⃣ What to write (copy this structure, adapt wording)
+
+### A. Why PostgreSQL was used
+
+You already did this — now explain it.
+
+Write something like:
+
+> PostgreSQL was used to store structured, relational data such as meetings and transcript turns. It enforces schema constraints, referential integrity, and supports transactional consistency, making it suitable for core data ingestion and validation.
+
+Key points to mention (bullet form in report is fine):
+
+* Strong schema
+* Referential integrity
+* Reliable ETL
+* Deterministic structure
+
+---
+
+### B. Why MongoDB was introduced
+
+This is the **key argument**.
+
+Write:
+
+> MongoDB was introduced to support text-heavy analytics and NLP-style workloads. Transcript turns are semi-structured and require frequent text search, aggregation, and filtering operations, which are more naturally supported by MongoDB’s document model and aggregation framework.
+
+Mention explicitly:
+
+* `$text` search
+* Regex queries
+* Aggregation pipeline
+* No JOIN overhead
+* Schema flexibility
+
+---
+
+### C. Why NOT only PostgreSQL (this is important)
+
+One short paragraph:
+
+> While PostgreSQL supports full-text search, implementing NLP-style queries requires additional preprocessing such as tsvector generation and complex joins. MongoDB enables faster iteration for exploratory text analytics and NLP preprocessing without modifying schema.
+
+This shows you **thought critically**, not blindly.
+
+---
+
+## 3️⃣ Architecture diagram (OPTIONAL but STRONG)
+
+If your course likes diagrams, add **one simple diagram**.
+
+### Very simple diagram (boxes):
+
+```
+MeetingBank Dataset (CSV)
+        |
+        v
+PostgreSQL (Structured Storage)
+  - meetings
+  - turns
+        |
+        v
+MongoDB (Analytics / NLP Layer)
+  - text search
+  - aggregation
+  - future embeddings
+```
+
+📁 Put this in:
+
+```
+diagrams/architecture.png
+```
+
+Your **screenshots** should go in:
+
+```
+screenshots/mongodb_analytics/
+```
+
+(You did the right thing asking — diagrams ≠ screenshots.)
+
+---
+
+## 4️⃣ Answer to your earlier worry (audio / video)
+
+Very important — read carefully:
+
+👉 **You are NOT locked out of audio/video.**
+
+If later the lecturer says:
+
+> “You should also process audio/video”
+
+You can say (truthfully):
+
+* Current pipeline handles **text layer**
+* Audio/video can be added as:
+
+  * Metadata references
+  * Separate collections
+  * Feature-extracted outputs (ASR, embeddings)
+
+Your architecture already **supports extension**.
+
+Most classmates loading “everything” usually:
+
+* Don’t justify it
+* Don’t query it
+* Don’t explain it
+
+You are ahead, not behind.
+
+---
+
+## 5️⃣ What is LEFT in the project (clear list)
+
+### DONE ✅
+
+* ETL
+* PostgreSQL schema
+* MongoDB ingestion
+* Indexing
+* Analytics queries
+* NLP-style aggregations
+
+### LEFT ⏳
+
+1. Architecture justification (this step)
+2. **One** NLP operation (later):
+
+   * keyword extraction OR
+   * simple summarization OR
+   * embeddings (optional)
+3. Final report polishing
+
+That’s it. No hidden monsters.
+
+---
+
+## Tell me next
+
+Reply with ONE of these:
+
+* **“Help me write the report section”**
+* **“Help me draw the architecture diagram”**
+* **“Let’s start the NLP step”**
+
+You are 100% on track.

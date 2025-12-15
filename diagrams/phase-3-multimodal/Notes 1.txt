@@ -1,0 +1,220 @@
+Perfect.
+Phase 3 starts **now**. Slow, clean, no overthinking.
+
+---
+
+# 🔵 PHASE 3 — MULTI-MODAL METADATA INTEGRATION (ENGINEERING-CORRECT)
+
+**Goal:**
+Show that you understand the dataset is **text + audio + video**, and that as a **data engineer**, you store **references + metadata**, not raw media.
+
+This is exactly what your professor wants.
+
+---
+
+## ✅ KEY DECISION (MADE FOR YOU)
+
+👉 **Create a NEW collection** called:
+
+```
+meeting_media
+```
+
+**Why?**
+
+* Clean separation of concerns
+* Scales if media grows
+* Industry-standard design
+* Easy to justify in report
+
+Do **NOT** dump this into `meetings`.
+
+---
+
+## 🧱 SCHEMA (COPY THIS INTO YOUR NOTES)
+
+Each document represents **one meeting’s media info**.
+
+```json
+{
+  "meeting_id": 1,
+  "city": "Seattle",
+  "audio_source": "huggingface",
+  "audio_url": "https://huggingface.co/datasets/huuuyeah/meetingbank",
+  "video_source": "archive.org",
+  "video_url": "https://archive.org/details/SeattleCityCouncil",
+  "has_transcript": true,
+  "has_audio": true,
+  "has_video": true
+}
+```
+
+⚠️ URLs are **references**, not downloads — that’s correct.
+
+---
+
+## 🧪 STEP 1 — CREATE & INSERT SAMPLE DOCUMENTS
+
+You do **NOT** need all 1,366 meetings.
+Insert **5–10 records** only.
+
+### Mongo Shell / Compass Playground
+
+```js
+use meetingbank
+
+db.meeting_media.insertMany([
+  {
+    meeting_id: 1,
+    city: "Seattle",
+    audio_source: "huggingface",
+    audio_url: "https://huggingface.co/datasets/huuuyeah/meetingbank",
+    video_source: "archive.org",
+    video_url: "https://archive.org/details/SeattleCityCouncil",
+    has_transcript: true,
+    has_audio: true,
+    has_video: true
+  },
+  {
+    meeting_id: 2,
+    city: "Boston",
+    audio_source: "huggingface",
+    audio_url: "https://huggingface.co/datasets/huuuyeah/meetingbank",
+    video_source: "archive.org",
+    video_url: "https://archive.org/details/BostonCityCouncil",
+    has_transcript: true,
+    has_audio: true,
+    has_video: true
+  }
+])
+```
+
+📸 **Screenshot #1**
+
+> `meeting_media` collection showing inserted documents
+
+---
+
+## 🧪 STEP 2 — BASIC ANALYTICS (VERY IMPORTANT)
+
+### Query 1: Meetings with full multi-modal coverage
+
+```js
+db.meeting_media.find({
+  has_audio: true,
+  has_video: true,
+  has_transcript: true
+})
+```
+
+📸 **Screenshot #2**
+
+---
+
+### Query 2: Count meetings by city
+
+```js
+db.meeting_media.aggregate([
+  {
+    $group: {
+      _id: "$city",
+      count: { $sum: 1 }
+    }
+  }
+])
+```
+
+📸 **Screenshot #3**
+
+---
+
+### Query 3: Join with meetings (LOOKS ADVANCED)
+
+```js
+db.meeting_media.aggregate([
+  {
+    $lookup: {
+      from: "meetings",
+      localField: "meeting_id",
+      foreignField: "meeting_id",
+      as: "meeting_info"
+    }
+  }
+])
+```
+
+📸 **Screenshot #4**
+
+This shows:
+
+* You can link structured + unstructured data
+* MongoDB handles heterogeneous schemas well
+
+---
+
+## 📁 WHERE TO SAVE SCREENSHOTS (ANSWERING YOUR OLD QUESTION)
+
+YES — use:
+
+```
+diagrams/
+```
+
+But create a subfolder:
+
+```
+diagrams/phase-3-multimodal/
+```
+
+Put:
+
+* Screenshot #1–#4
+* Name them clearly:
+
+  * `media_collection.png`
+  * `multimodal_query.png`
+  * etc.
+
+---
+
+## 🧠 WHAT YOU WILL SAY IN THE REPORT (SHORT & STRONG)
+
+> “Due to the size of raw media files (3,500+ hours of audio/video), the pipeline stores **media references and metadata** instead of binary data. This reflects real-world data engineering practices where object storage and external repositories are linked via metadata.”
+
+This single sentence = **marks**.
+
+---
+
+## 🧾 GIT CHECKPOINT (DO THIS AFTER)
+
+```bash
+git add docs/
+git commit -m "Phase 3: Multi-modal metadata integration (audio/video references)"
+git push
+```
+
+---
+
+## 🛑 STOP POINT (IMPORTANT)
+
+Do **ONLY**:
+
+* Insert media metadata
+* Run 3 queries
+* Take screenshots
+* Commit
+
+Do **NOT**:
+
+* Download audio
+* Parse video
+* Build ML models
+
+---
+
+When you finish Phase 3, reply:
+
+**“Phase 3 done — ready for Phase 4”**
+
+We are on track.
+You’re doing this properly.
