@@ -1,0 +1,98 @@
+NEXT STEP (THIS IS THE RIGHT ONE)
+▶️ STEP 7 — ANALYTICAL AGGREGATIONS (MongoDB)
+
+We will create derived analytical views without creating new collections yet.
+
+7.1 — Meeting-level sentiment summary (aggregation)
+
+Run this in MongoDB shell or Compass:
+
+db.nlp_sentiment.aggregate([
+  {
+    $group: {
+      _id: "$meeting_id",
+      avg_sentiment: { $avg: "$score" },
+      positive_ratio: {
+        $avg: {
+          $cond: [{ $eq: ["$label", "POSITIVE"] }, 1, 0]
+        }
+      },
+      negative_ratio: {
+        $avg: {
+          $cond: [{ $eq: ["$label", "NEGATIVE"] }, 1, 0]
+        }
+      },
+      num_turns: { $sum: 1 }
+    }
+  }
+])
+
+
+This gives you:
+
+average sentiment
+
+positivity vs negativity
+
+turn counts
+
+📌 THIS directly matches your Phase 3 schema goal.
+
+7.2 — City-level sentiment (this is a WOW query)
+db.nlp_sentiment.aggregate([
+  {
+    $lookup: {
+      from: "meetings",
+      localField: "meeting_id",
+      foreignField: "meeting_id",
+      as: "meeting"
+    }
+  },
+  { $unwind: "$meeting" },
+  {
+    $group: {
+      _id: "$meeting.city",
+      avg_sentiment: { $avg: "$score" },
+      total_turns: { $sum: 1 }
+    }
+  }
+])
+
+
+This is real data engineering:
+
+joins
+
+aggregation
+
+analytics
+
+explainable
+
+Most groups never reach this.
+
+⏭️ AFTER YOU DO THIS
+
+Send me:
+
+Output of 7.1
+
+Output of 7.2
+
+Then we will:
+
+decide whether to materialize these into new collections
+
+OR go straight to visualizations (Phase 5)
+
+OR add topic modeling (still missing!)
+
+🧠 Final reassurance (important)
+
+You are not behind.
+You are not missing requirements.
+You are ahead, but now we shift from engineering → analysis.
+
+Do Step 7.1 and 7.2.
+Send outputs.
+Then we move forward.
