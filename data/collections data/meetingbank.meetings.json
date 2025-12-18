@@ -1,0 +1,130 @@
+[{
+  "_id": {
+    "$oid": "693ea4199d942dea2de27d27"
+  },
+  "meeting_id": 1,
+  "dataset": "MeetingBank",
+  "split": "train",
+  "num_turns": 5169,
+  "city": "Seattle"
+},
+{
+  "_id": {
+    "$oid": "6941b41888aec758527a2b55"
+  },
+  "meeting_id": 2,
+  "city": "Boston",
+  "summary": "AS AMENDED a bill for an ordinance amending the Denver Zoning Code to revise parking exemptions for pre-existing small zone lots. Approves a text amendment to the Denver Zoning Code to revise the Pre-Existing Small Zone Lot parking exemption. The Committee approved filing this bill at its meeting on 2-14-17. On 2-27-17, Council held this item in Committee to 3-20-17. Amended 3-20-17 to ensure that the parking exemption is applied for all uses. Some parking requirements are calculated based on gross floor area while others are on number of units and not explicitly for gross floor area, to further clarify the legislative intent of the proposed bill to emphasize the city’s commitment to more comprehensively address transportation demand management strategies in the short term, and to require a Zoning Permit with Informational Notice for all new buildings on Pre-Existing Small Zone Lots that request to use the small lot parking exemption; Enables all expansions to existing buildings to receive the full parking exemption; and clarifies at what point an “existing building” is considered "
+},
+{
+  "_id": {
+    "$oid": "6941b41888aec758527a2b57"
+  },
+  "meeting_id": 3,
+  "city": "Denver",
+  "summary": "Recommendation to respectfully request City Council approval of the 2017 Federal Legislative Agenda as recommended by the Federal Legislation Committee."
+},
+{
+  "_id": {
+    "$oid": "6941b41888aec758527a2b59"
+  },
+  "meeting_id": 4,
+  "city": "Denver",
+  "summary": "AS AMENDED a bill for an ordinance amending the Denver Zoning Code to revise parking exemptions for pre-existing small zone lots. Approves a text amendment to the Denver Zoning Code to revise the Pre-Existing Small Zone Lot parking exemption. The Committee approved filing this bill at its meeting on 2-14-17. On 2-27-17, Council held this item in Committee to 3-20-17. Amended 3-20-17 to ensure that the parking exemption is applied for all uses. Some parking requirements are calculated based on gross floor area while others are on number of units and not explicitly for gross floor area, to further clarify the legislative intent of the proposed bill to emphasize the city’s commitment to more comprehensively address transportation demand management strategies in the short term, and to require a Zoning Permit with Informational Notice for all new buildings on Pre-Existing Small Zone Lots that request to use the small lot parking exemption; Enables all expansions to existing buildings to receive the full parking exemption; and clarifies at what point an “existing building” is considered "
+},
+{
+  "_id": {
+    "$oid": "6941b41888aec758527a2b5b"
+  },
+  "meeting_id": 5,
+  "city": "Denver",
+  "summary": "AS AMENDED a bill for an ordinance amending the Denver Zoning Code to revise parking exemptions for pre-existing small zone lots. Approves a text amendment to the Denver Zoning Code to revise the Pre-Existing Small Zone Lot parking exemption. The Committee approved filing this bill at its meeting on 2-14-17. On 2-27-17, Council held this item in Committee to 3-20-17. Amended 3-20-17 to ensure that the parking exemption is applied for all uses. Some parking requirements are calculated based on gross floor area while others are on number of units and not explicitly for gross floor area, to further clarify the legislative intent of the proposed bill to emphasize the city’s commitment to more comprehensively address transportation demand management strategies in the short term, and to require a Zoning Permit with Informational Notice for all new buildings on Pre-Existing Small Zone Lots that request to use the small lot parking exemption; Enables all expansions to existing buildings to receive the full parking exemption; and clarifies at what point an “existing building” is considered "
+},
+{
+  "_id": {
+    "$oid": "6941b41888aec758527a2b5d"
+  },
+  "meeting_id": 6,
+  "city": "Denver",
+  "summary": "AS AMENDED a bill for an ordinance amending the Denver Zoning Code to revise parking exemptions for pre-existing small zone lots. Approves a text amendment to the Denver Zoning Code to revise the Pre-Existing Small Zone Lot parking exemption. The Committee approved filing this bill at its meeting on 2-14-17. On 2-27-17, Council held this item in Committee to 3-20-17. Amended 3-20-17 to ensure that the parking exemption is applied for all uses. Some parking requirements are calculated based on gross floor area while others are on number of units and not explicitly for gross floor area, to further clarify the legislative intent of the proposed bill to emphasize the city’s commitment to more comprehensively address transportation demand management strategies in the short term, and to require a Zoning Permit with Informational Notice for all new buildings on Pre-Existing Small Zone Lots that request to use the small lot parking exemption; Enables all expansions to existing buildings to receive the full parking exemption; and clarifies at what point an “existing building” is considered "
+},
+{
+  "_id": {
+    "$oid": "6941b41888aec758527a2b5f"
+  },
+  "meeting_id": 7,
+  "city": "Long Beach",
+  "summary": "Report of the City Clerk on the Certificate of Sufficiency for Initiative No. 134, concerning approval voting for Mayor, City Attorney, and City Councilmember primary elections."
+},
+{
+  "_id": {
+    "$oid": "6941b41888aec758527a2b61"
+  },
+  "meeting_id": 8,
+  "city": "Long Beach",
+  "summary": "A bill for an ordinance vacating a portion of the right-of-way adjacent to 2099 Chestnut Place bounded by West 29th Avenue and Chestnut Place and Division Street, with reservations. Vacates a portion of the right of way adjacent to 2099 Chestnut Place, bounded by West 29th Avenue, Chestnut Place and Division Street, with reservations, in Council District 9. The Committee approved filing this item at its meeting on 8-13-19."
+},
+{
+  "_id": {
+    "$oid": "6941b41988aec758527a2b63"
+  },
+  "meeting_id": 9,
+  "city": "Long Beach",
+  "summary": "Report of the City Clerk on the Certificate of Sufficiency for Initiative No. 134, concerning approval voting for Mayor, City Attorney, and City Councilmember primary elections."
+},
+{
+  "_id": {
+    "$oid": "69436a865a6523bf7e8b3615"
+  },
+  "meeting_id": 10,
+  "city": "Seattle",
+  "date": "2025-12-15",
+  "agenda": "City Council meeting about transportation and budget",
+  "participants": [
+    "Mayor",
+    "Council Members"
+  ],
+  "transcript_available": true
+},
+{
+  "_id": {
+    "$oid": "69436a995a6523bf7e8b3617"
+  },
+  "meeting_id": 11,
+  "city": "Seattle",
+  "date": "2025-12-16",
+  "agenda": "Discussion on community health initiatives",
+  "participants": [
+    "Mayor",
+    "Health Committee"
+  ],
+  "transcript_available": true
+},
+{
+  "_id": {
+    "$oid": "69436aa95a6523bf7e8b3619"
+  },
+  "meeting_id": 12,
+  "city": "Boston",
+  "date": "2025-12-17",
+  "agenda": "City planning and housing policy review",
+  "participants": [
+    "Planner",
+    "Council Members"
+  ],
+  "transcript_available": true
+},
+{
+  "_id": {
+    "$oid": "69436ab85a6523bf7e8b361b"
+  },
+  "meeting_id": 13,
+  "city": "Boston",
+  "date": "2025-12-18",
+  "agenda": "Discussion on local business development and taxes",
+  "participants": [
+    "Mayor",
+    "Business Committee"
+  ],
+  "transcript_available": true
+}]

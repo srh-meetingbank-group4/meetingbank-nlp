@@ -1,0 +1,99 @@
+[{
+  "_id": {
+    "$oid": "6944084deb5f08b97e0ceb38"
+  },
+  "avg_sentiment": 0.9034342169761658,
+  "positive_ratio": 1,
+  "negative_ratio": 0,
+  "meeting_id": 7,
+  "city": "Long Beach",
+  "model": "distilbert-base-uncased-finetuned-sst-2-english"
+},
+{
+  "_id": {
+    "$oid": "6944084deb5f08b97e0ceb39"
+  },
+  "avg_sentiment": 0.903509795665741,
+  "positive_ratio": 1,
+  "negative_ratio": 0,
+  "meeting_id": 5,
+  "city": "Denver",
+  "model": "distilbert-base-uncased-finetuned-sst-2-english"
+},
+{
+  "_id": {
+    "$oid": "6944084deb5f08b97e0ceb3a"
+  },
+  "avg_sentiment": 0.8016433119773865,
+  "positive_ratio": 0,
+  "negative_ratio": 1,
+  "meeting_id": 2,
+  "city": "Boston",
+  "model": "distilbert-base-uncased-finetuned-sst-2-english"
+},
+{
+  "_id": {
+    "$oid": "6944084deb5f08b97e0ceb3b"
+  },
+  "avg_sentiment": 0.9431288327308411,
+  "positive_ratio": 0.6589941972920697,
+  "negative_ratio": 0.34100580270793035,
+  "meeting_id": 1,
+  "city": "Seattle",
+  "model": "distilbert-base-uncased-finetuned-sst-2-english"
+},
+{
+  "_id": {
+    "$oid": "6944084deb5f08b97e0ceb3c"
+  },
+  "avg_sentiment": 0.9885247349739075,
+  "positive_ratio": 1,
+  "negative_ratio": 0,
+  "meeting_id": 6,
+  "city": "Denver",
+  "model": "distilbert-base-uncased-finetuned-sst-2-english"
+},
+{
+  "_id": {
+    "$oid": "6944084deb5f08b97e0ceb3d"
+  },
+  "avg_sentiment": 0.9978323578834534,
+  "positive_ratio": 0,
+  "negative_ratio": 1,
+  "meeting_id": 4,
+  "city": "Denver",
+  "model": "distilbert-base-uncased-finetuned-sst-2-english"
+},
+{
+  "_id": {
+    "$oid": "6944084deb5f08b97e0ceb3e"
+  },
+  "avg_sentiment": 0.8985108733177185,
+  "positive_ratio": 1,
+  "negative_ratio": 0,
+  "meeting_id": 3,
+  "city": "Denver",
+  "model": "distilbert-base-uncased-finetuned-sst-2-english"
+},
+{
+  "_id": {
+    "$oid": "6944084deb5f08b97e0ceb3f"
+  },
+  "avg_sentiment": 0.9887306094169617,
+  "positive_ratio": 0,
+  "negative_ratio": 1,
+  "meeting_id": 8,
+  "city": "Long Beach",
+  "model": "distilbert-base-uncased-finetuned-sst-2-english"
+},
+{
+  "_id": {
+    "$oid": "6944084deb5f08b97e0ceb40"
+  },
+  "avg_sentiment": 0.6861264705657959,
+  "positive_ratio": 1,
+  "negative_ratio": 0,
+  "meeting_id": 9,
+  "city": "Long Beach",
+  "model": "distilbert-base-uncased-finetuned-sst-2-english"
+}]
